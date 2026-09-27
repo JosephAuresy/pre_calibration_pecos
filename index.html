@@ -1113,7 +1113,7 @@ function salObsChart(){
 /* ---------- calibration figures: flow duration + climatology ---------- */
 function salFdChart(){
   const g = $("salFdGauge").value; const d = SAL.flowcal[g]; if(!d) return;
-  const o = base(); o.scales = { x: axis({ title:{display:true,text:"% time exceeded",color:css("--muted")} }),
+  const o = base(); o.scales = { x: axis({ type:"linear", min:0, max:100, title:{display:true,text:"% time exceeded",color:css("--muted")} }),
     y: axis({ type:"logarithmic", title:{display:true,text:"m3/s (log)",color:css("--muted")} }) };
   mk("chSalFd", { type:"line", data:{ datasets:[
     { label:"simulated", data:d.fd_sim.map(([x,y])=>({x,y})), borderColor:css("--accent"), pointRadius:0, borderWidth:1.6 },
