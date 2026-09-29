@@ -90,6 +90,7 @@ footer{max-width:1280px;margin:0 auto;padding-block:18px 40px;color:var(--muted)
   <h1>Where the flow is wrong, and what has moved it</h1>
   <p class="lede">Every panel below is computed from finished model runs and USGS daily flow, in real units (m³/s, mm). The model is <b>not calibrated yet</b>. One cause of the large over-prediction has been found and fixed (rain-gauge gaps). The remainder was traced to specific tributaries, oversized channel widths and missing diversions, and a groundwater-routing defect whose patch (v24) raised flows instead of lowering them. Tests of the missing processes (v31/v32) cut Brantley from 9.5 to 4.1 m³/s (observed 2.35); the recommended base is v32a. The model has been extended to 2025 (v30_ext, finished 2000-2025). Use the controls to compare runs.</p>
   <div class="status" id="status"></div>
+  <p class="lede" style="margin-top:6px;font-size:12.5px">Technical ledger for the model itself — for the public-facing tools built on top of it, see the <a href="https://josephauresy.github.io/pecos-reservoirs/" target="_blank" rel="noopener">Reservoir &amp; Reuse Lab</a> (real observed data) and the <a href="https://josephauresy.github.io/pecos-salinity-lab/" target="_blank" rel="noopener">Salinity teaching lab</a> (idealized stakeholder simulation).</p>
 </header>
 
 <div class="layout">
@@ -104,6 +105,8 @@ footer{max-width:1280px;margin:0 auto;padding-block:18px 40px;color:var(--muted)
   <a href="#salsummary">Executive summary</a><a href="#salhistory">Development history</a><a href="#salsources">Salinity sources</a><a href="#salbalance">Water &amp; salt balance</a><a href="#salobs">Observation comparison</a><a href="#saluncert">Remaining uncertainties</a><a href="#salcalib">Calibration readiness</a><a href="#salbugs">Salinity bug tracker</a>
   <div class="grp">Salinity Atlas</div>
   <a href="#salmaps">Maps 1&ndash;8</a><a href="#salfigs">Observed vs simulated</a><a href="#salcalfigs">Calibration figures</a><a href="#salsynth">Synthesis figure</a>
+  <div class="grp">Related tools</div>
+  <a href="https://josephauresy.github.io/pecos-reservoirs/" target="_blank" rel="noopener">Reservoir &amp; Reuse Lab &#8599;</a><a href="https://josephauresy.github.io/pecos-reservoirs/red-bluff-reservoir-hub.html" target="_blank" rel="noopener">Red Bluff Hub &#8599;</a><a href="https://josephauresy.github.io/pecos-salinity-lab/" target="_blank" rel="noopener">Salinity teaching lab &#8599;</a>
 </nav>
 
 <main>
@@ -331,6 +334,7 @@ footer{max-width:1280px;margin:0 auto;padding-block:18px 40px;color:var(--muted)
     <div class="tile"><div class="tv">~7 : 1</div><div class="tl">Groundwater vs point-source chloride load</div></div>
     <div class="tile"><div class="tv">1.06&ndash;3.6&times;</div><div class="tl">TDS bias, high, at the two stable-flow gauges (Red Bluff, Orla/ch82)</div></div>
   </div>
+  <p class="what" style="margin-top:-6px">This summary is reproduced (real Red Bluff numbers, not re-derived) in the <a href="https://josephauresy.github.io/pecos-reservoirs/red-bluff-reservoir-hub.html#tab-salinity" target="_blank" rel="noopener">Red Bluff Reservoir Modeling Hub</a>'s Salinity &amp; WQ tab, alongside real observed inflow/outflow/water-level data this ledger doesn't carry.</p>
   <div class="callout">
     <b>Status: Ready with caveats.</b> The salt-transport code is numerically stable and mass-conserving over the full run &mdash; not true as recently as <span class="mono">v41&ndash;v45</span>, where every point source contributed exactly zero and groundwater solute output was entirely NaN. It is not unconditionally ready: (a) Sumner, Brantley and Artesia concentrations are destabilized by the same base-flow collapse documented in the Flow chapter above, not by a salt-code defect; (b) Red Bluff and Orla are usable now but biased 1.1&ndash;3.6&times; high, explainable by unverified initial-condition assumptions; (c) channel 82's identity as "Orla" is unresolved (see Remaining uncertainties).
   </div>
