@@ -90,7 +90,22 @@ footer{max-width:1280px;margin:0 auto;padding-block:18px 40px;color:var(--muted)
   <h1>Where the flow is wrong, and what has moved it</h1>
   <p class="lede">Every panel below is computed from finished model runs and USGS daily flow, in real units (m³/s, mm). The model is <b>not calibrated yet</b>. One cause of the large over-prediction has been found and fixed (rain-gauge gaps). The remainder was traced to specific tributaries, oversized channel widths and missing diversions, and a groundwater-routing defect whose patch (v24) raised flows instead of lowering them. Tests of the missing processes (v31/v32) cut Brantley from 9.5 to 4.1 m³/s (observed 2.35); the recommended base is v32a. The model has been extended to 2025 (v30_ext, finished 2000-2025). Use the controls to compare runs.</p>
   <div class="status" id="status"></div>
-  <p class="lede" style="margin-top:6px;font-size:12.5px">Technical ledger for the model itself — for the public-facing tools built on top of it, see the <a href="https://josephauresy.github.io/pecos-reservoirs/" target="_blank" rel="noopener">Reservoir &amp; Reuse Lab</a> (real observed data) and the <a href="https://josephauresy.github.io/pecos-salinity-lab/" target="_blank" rel="noopener">Salinity teaching lab</a> (idealized stakeholder simulation).</p>
+  <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:8px">
+    <div style="background:#fff;border-radius:9px;width:92px;height:48px;display:flex;align-items:center;justify-content:center;padding:5px;flex-shrink:0;border:1px solid var(--line)"><img src="assets/logos/txpwc.png" alt="Texas Produced Water Consortium" style="max-width:78px;max-height:36px;width:auto;height:auto;object-fit:contain"></div>
+    <div style="background:#fff;border-radius:9px;width:92px;height:48px;display:flex;align-items:center;justify-content:center;padding:5px;flex-shrink:0;border:1px solid var(--line)"><img src="assets/logos/water_center.png" alt="Water &amp; the Environment Research Center" style="max-width:78px;max-height:36px;width:auto;height:auto;object-fit:contain"></div>
+    <div style="background:#fff;border-radius:9px;width:92px;height:48px;display:flex;align-items:center;justify-content:center;padding:5px;flex-shrink:0;border:1px solid var(--line)"><img src="assets/logos/ihydro_lab.png" alt="iHydro Lab" style="max-width:78px;max-height:36px;width:auto;height:auto;object-fit:contain"></div>
+  </div>
+  <p class="lede" style="margin-top:6px;font-size:12.5px">Technical ledger for the model itself — part of the Pecos modeling suite, you're on PreCal. Public-facing tools built on top of it:</p>
+  <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:6px">
+    <a href="https://josephauresy.github.io/pecos-reservoirs/" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:10px;padding:9px 14px;border-radius:12px;background:var(--surface);border:1px solid var(--line);text-decoration:none;color:var(--ink);flex:1 1 220px;max-width:300px">
+      <div style="width:34px;height:34px;border-radius:9px;background:rgba(76,201,240,.14);color:#4cc9f0;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><line x1="6" y1="3" x2="6" y2="21"/><path d="M9 8c2 0 2 2 4 2s2-2 4-2"/><path d="M9 13c2 0 2 2 4 2s2-2 4-2"/><path d="M9 18c2 0 2 2 4 2s2-2 4-2"/></svg></div>
+      <div><div style="font-weight:600;font-size:13px">Reservoir</div><div style="font-size:11px;color:var(--muted);margin-top:1px">Real observed reservoir data</div></div>
+    </a>
+    <a href="https://josephauresy.github.io/pecos-salinity-lab/" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:10px;padding:9px 14px;border-radius:12px;background:var(--surface);border:1px solid var(--line);text-decoration:none;color:var(--ink);flex:1 1 220px;max-width:300px">
+      <div style="width:34px;height:34px;border-radius:9px;background:rgba(204,0,0,.14);color:#e0524a;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M12 2l7 5v10l-7 5-7-5V7z"/><path d="M12 2v20M5 7l7 5 7-5M5 17l7-5 7 5"/></svg></div>
+      <div><div style="font-weight:600;font-size:13px">Salt</div><div style="font-size:11px;color:var(--muted);margin-top:1px">Idealized stakeholder simulation</div></div>
+    </a>
+  </div>
 </header>
 
 <div class="layout">
